@@ -91,7 +91,6 @@ public class main {
                     }
                     try {
                         job.print();
-                        System.out.println("Printed");
                     } catch (PrinterException printerException) {
                         printerException.printStackTrace();
                     }
@@ -102,7 +101,6 @@ public class main {
                     }
                     docNum++;
                 }
-                System.out.println("finish");
                 statusLabel.setText("Finished printing "+docNum+" documents.");
                 pdfprinter_panel.validate();
             }
