@@ -45,15 +45,9 @@ public class main {
                     File[] f = fileChooser.getSelectedFile().listFiles();
                     folderPane.setText(fileChooser.getSelectedFile().toString());
                     for(File i:f){
-//                        System.out.println(i);
                         filePaths.add(i.toString());
                     }
 
-                }
-
-                for(int i=0; i<filePaths.size(); i++)
-                {
-                    System.out.println(filePaths.get(i));
                 }
             }
         });
@@ -64,10 +58,6 @@ public class main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selectedPrinter = printerSelector.getSelectedItem().toString();
-//                if(printerSelector.getSelectedItem().toString().equals(printerName))
-//                    System.out.println("its same");
-//                else
-//                    System.out.println("Houston, we have a problem.");
 
                 int docNum = 0;
                 statusLabel.setText("Printing. Please wait.");
@@ -81,7 +71,6 @@ public class main {
 
 //                    PrintService myPrintService = findPrintService(printerName);
                     PrintService myPrintService = findPrintService(selectedPrinter);
-                    System.out.println(myPrintService.getName());
                     PrinterJob job = PrinterJob.getPrinterJob();
                     Paper paper = new Paper();
 //                    paper.setSize((width/2.54)*72d, (height/2.54)*72d);
