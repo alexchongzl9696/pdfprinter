@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="czs_pdfprinter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/czs_pdfprinter_jar</output-path>
+    <root id="archive" name="czs_pdfprinter.jar">
+      <element id="module-output" name="czs_pdfprinter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/pdfbox-app-2.0.21.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
