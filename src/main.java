@@ -21,8 +21,6 @@ public class main {
 
     public main() {
         ArrayList<String> filePaths = new ArrayList<>();
-//        String printerName = "Xprinter XP-460B"; // printer name
-//        String printerName = "LABEL"; // printer name
 
         PrintService[] ps = PrintServiceLookup.lookupPrintServices(null, null);
         for(int i=0; i<ps.length; i++){
@@ -52,8 +50,6 @@ public class main {
             }
         });
 
-
-
         startBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,11 +65,9 @@ public class main {
                         ioException.printStackTrace();
                     }
 
-//                    PrintService myPrintService = findPrintService(printerName);
                     PrintService myPrintService = findPrintService(selectedPrinter);
                     PrinterJob job = PrinterJob.getPrinterJob();
                     Paper paper = new Paper();
-//                    paper.setSize((width/2.54)*72d, (height/2.54)*72d);
                     paper.setSize(283.46472, 425.19672); // width = 10cm (3.93701 inches), height = 15cm (5.90551 inches)
                     paper.setImageableArea(12, 5, paper.getWidth(), paper.getHeight());
                     PageFormat pageFormat = new PageFormat();
@@ -82,8 +76,6 @@ public class main {
                     book.append(new PDFPrintable(document, Scaling.SHRINK_TO_FIT), pageFormat, document.getNumberOfPages());
                     job.setPageable(book);
 
-                    // Commented out to test printing with specified size
-//                    job.setPageable(new PDFPageable(document));
                     try {
                         job.setPrintService(myPrintService);
                     } catch (PrinterException printerException) {
