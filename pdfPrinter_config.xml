@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\Zhen Li\Desktop\czs_pdfprinter\czs_pdfprinter.jar</jar>
+  <jar>C:\Users\Zhen Li\Desktop\czs_pdfprinter\out\artifacts\czs_pdfprinter_jar\czs_pdfprinter.jar</jar>
   <outfile>C:\Users\Zhen Li\Desktop\czs_pdfprinter\PDF Printer.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
